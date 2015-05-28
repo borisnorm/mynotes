@@ -1,0 +1,5 @@
+[k Meaning Clustering]
+Two steps:
+1. Cluster assignment step
+2. Move centroid step
+* If any cluster centroid has zero data points/examples assigned to it, just eliminate that class centroid.
