@@ -3,3 +3,5 @@ Two steps:
 1. Cluster assignment step
 2. Move centroid step
 * If any cluster centroid has zero data points/examples assigned to it, just eliminate that class centroid.
+* Recommend Initialization Method: Randomly pick k points as the initial k cluster centroids.
+* To avoid local optima, do multiple random initialization (normally 50 - 100). 
