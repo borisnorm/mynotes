@@ -1,0 +1,30 @@
+* How to override equals() method?
+See example below,
+
+	@Override
+	public boolean equals(Object obj) {
+		// Check shallow
+		if (obj == this) {
+			return true;
+		}
+
+		// Check class name
+		if (obj == null || obj.getClass() != this.getClass()) {
+			return false;
+		}
+
+		// Check deep
+		Point2D myPoint2D = (Point2D) obj;
+		return this.x == myPoint2D.x && this.y == myPoint2D.y;
+	}
+
+* Access Levels
+Modifier	Class	Package	Subclass	World
+public		Y	Y	Y		Y
+protected	Y	Y	Y		N
+no modifier	Y	Y	N		N
+private		Y	N	N		N
+
+* StringBuilder
+deleteCharAt()
+length() NOT size()
