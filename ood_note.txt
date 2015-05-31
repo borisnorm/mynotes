@@ -1,0 +1,10 @@
+* Elevator
+http://www.careercup.com/question?id=1808669
+
+http://thought-works.blogspot.com/2012/11/object-oriented-design-for-elevator-in.html
+
+http://baozitraining.org/blog/Object-oriented-design-question/
+
+* 十字路口的OO design
+
+http://www4.newsmth.net/nForum/#!article/CoderInterview/3317?p=1

@@ -1,0 +1,11 @@
+* A IPv4 address has 32 bits
+  A IPv6 address has 128 bits
+
+* REST (Representational state transfer)
+Client–server
+Stateless
+Cacheable
+Layered system
+Code on demand (optional) (like js)
+http://baozitraining.org/blog/what-is-rest-style/
+

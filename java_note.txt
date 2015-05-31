@@ -28,3 +28,15 @@ private		Y	N	N		N
 * StringBuilder
 deleteCharAt()
 length() NOT size()
+
+* PriorityQueue
+Constructor: 
+PriorityQueue(),
+PriorityQueue(int initialCapacity, Comparator<? super E> comparator)
+
+Operations: 
+add(), 
+clear(), 
+peek(), 
+poll() - Retrieves and removes the head of this queue, or returns null if this queue is empty,
+size()

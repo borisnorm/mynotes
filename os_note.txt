@@ -1,0 +1,7 @@
+* Deadlock
+a. Mutual exclusion
+b. Hold and wait
+c. No preemption
+d. Circular wait
+
+Deadlock prevention algorithm normally forces on condition (d)
