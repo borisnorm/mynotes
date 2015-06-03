@@ -1,0 +1,5 @@
+* Line
+	y = ax + b
+	a - slope
+	b - intercept
+ The line can also be written as: ax + by = c
