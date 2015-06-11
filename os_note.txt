@@ -5,3 +5,16 @@ c. No preemption
 d. Circular wait
 
 Deadlock prevention algorithm normally forces on condition (d)
+* Paging
+	One of the memory management schemes by which a computer stores and retrieves data from the secondary storage for use in main memory.
+	An important part of virtual memory implementation.
+
+* Virtual memory:  a memory management technique maps memory addresses used by a program, called virtual addresses, into physical addresses in computer memory.
+
+* Context switch: a context switch is the process of storing and restoring the state (more specifically, the context) of a process or thread so that execution can be resumed from the same point at a later time. 
+
+* Interrupt: a signal to the processor emitted by hardware or software indicating an event that needs immediate attention. 
+	Hardware interrupt: used by devices to communicate that they require attention from the operating system.
+	Software interrupt: caused either by an exceptional condition in the processor itself, or a special instruction in the instruction set which causes an interrupt when it is executed.
+
+* System call: how a program requests a service from an operating system's kernel.

@@ -10,3 +10,7 @@ http://baozitraining.org/blog/Object-oriented-design-question/
 http://www4.newsmth.net/nForum/#!article/CoderInterview/3317?p=1
 
 * restuarant reservation system
+
+* URL Shortener Design
+http://www.zhihu.com/question/29270034#rd
+http://weibo.com/p/1001603839031023634643

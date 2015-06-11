@@ -75,3 +75,8 @@ See example below,
 
 	Note: The override method is: int compare(T t1, T t2).
 	Note: Don’t forget the last semicolon mark.
+
+* String vs. StringBuilder vs. StringBuffer
+	String is immutable, while StringBuilder and StringBuffer are mutable.
+	StringBuffer is synchronized so it is thread safe, StringBuilder is not.
+	

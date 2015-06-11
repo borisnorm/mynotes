@@ -1,0 +1,32 @@
+* Stable sorting algorithms:
+	Bubble sort
+	Bucket sort
+	Counting sort
+	Insertion sort
+	Merge sort
+	Radix sort
+
+	General quick sort is not stable.
+	Heap sort is not stable.
+	Radix sort is not stable.
+
+* Sorting algorithms comparsion:
+
+	Name		Best 	Avg		Worst 		Space		Stable
+
+	————————————————————————————————————————————————————————————————————
+	Quick sort	nlogn	nlogn		n^2		avg: logn	typically No
+								worst: n
+
+	Merge Sort	nlogn	nlogn		nlogn		n		Yes
+
+	Heapsort	nlogn	nlogn		nlogn		1		No
+
+	Insertion Sort	n	n^2		n^2		1		Yes
+
+	Bubble Sort	n	n^2		n^2		1		Yes
+
+	————————————————————————————————————————————————————————————————————
+	Bucket Sort		n + k		n^2+k		nk		Yes
+	Counting Sort		n + r		n + r		n + r		Yes
+	Radix Sort		d(n + k)	d(n + k)			No

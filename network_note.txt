@@ -9,3 +9,7 @@ Layered system
 Code on demand (optional) (like js)
 http://baozitraining.org/blog/what-is-rest-style/
 
+* HTTP redirect
+	301 (permanent redirect): client can not request original location, use new location only
+	302 (temporary redirect): client can continue request original location, useful to track how many has the shortened URL been clicked.
+
