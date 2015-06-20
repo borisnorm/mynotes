@@ -18,7 +18,7 @@ See example below,
 		return this.x == myPoint2D.x && this.y == myPoint2D.y;
 	}
 
-* How to override equals() method?
+* How to override hashCode() method?
 	1. Store some constant nonzero value, say, 17, in an int variable called result.
 	2. For each significant field f in your object (each field taken into account by the equals method, that is), do the following:
 		a. Compute an int hash code c for the field:
@@ -79,4 +79,49 @@ See example below,
 * String vs. StringBuilder vs. StringBuffer
 	String is immutable, while StringBuilder and StringBuffer are mutable.
 	StringBuffer is synchronized so it is thread safe, StringBuilder is not.
+
+* Vector vs. ArrayList
+	Vector is synchronized (and thus slow), ArrayList is not
+	Vector is not part of Collection
+	Vector is old implementation, avoid
+
+* Hashtable vs. HashMap
+	HashMap is non synchronized and not thread safe.On the other hand, HashTable is thread safe and synchronized.
+
+	HashMap allows one null key and any number of null values, while Hashtable does not allow null keys and null values.
+
+	HashMap is faster than Hashtable.
+
+	Hashtable is a subclass of Dictionary class which is obsolete in Jdk 1.7.
+
+	It is better off externally synchronizing a HashMap or using ConcurrentHashMap.
+
+	HashMap is the subclass of the AbstractMap class. 
+
+	But both Hashtable and HashMap both implements Map interface.
 	
+
+* Hashtable vs. ConcurrentHashMap
+	Both are thread safe, but ConcurentHashMap has better performance. When you read from a ConcurrentHashMap using get(), there are no locks, contrary to the HashTable for which all operations are simply synchronized.
+
+	HashMap is the best thing to use in a single threaded application.
+
+	Hashtable is old, ConcurrentHashMap in Java 5+.
+
+
+* Thread pool: a number of threads are created to perform a number of tasks. Typically, there are many more tasks than threads. As soon as a thread completes its task, it will request the next task from the queue until all tasks have been completed. The thread can then terminate, or sleep until there are new tasks available.
+
+* Database connection pool: a cache of database connections maintained so that the connections can be reused when future requests to the database are required.
+
+* Final vs. Finally vs. Finalize
+	Final: 1) for primitive variable, it means the variable cannot change; 2) for reference variable, it means it cannot point to any other object on the heap; 3) for a method, it means it cannot be overridden; 4) for a class, it means it cannot be subclassed.
+
+	Finally: try, catch, finally blocks. The finally block will always be executed (except if JVM exits from the try block). It is used to write the clean up code.
+
+	Finalize: called by garbage collector thread before reclaiming the memory allocated to the object, but it is not guaranteed. Do not use it.
+
+* Java stack and heap
+
+* Java GC
+
+* JVM 优化

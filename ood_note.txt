@@ -1,3 +1,11 @@
+* APIE:
+	Abstraction 
+	Polymorphism
+	Inheritance
+	Encapsulation
+
+	不管design 怎么考，你一定要围绕这四个概念来做，你一边写，一边说的时候 穿插这四个概念
+
 * Elevator
 http://www.careercup.com/question?id=1808669
 

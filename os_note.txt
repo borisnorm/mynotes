@@ -1,3 +1,11 @@
+* Two ways to implement thread in Java:
+	Implement Runnable interface
+	Extend Thread class
+
+* Why Runnable interface is better than Thread class?
+	Java does not support multiple inheritance
+	If we only what to be runnable, then just Runnable interface would be enough. No need to bother to inherit the full overhead of the Thread class.
+
 * Deadlock
 a. Mutual exclusion
 b. Hold and wait
@@ -5,16 +13,49 @@ c. No preemption
 d. Circular wait
 
 Deadlock prevention algorithm normally forces on condition (d)
+
+
+* Thread vs. Process
+
+	A process can be though of as an instance of a program in execution.
+
+	A process is an independent entity to which system resource are allocated.
+
+	Each process is executed in a separate address space
+
+	One process cannot access the variables and data structure of another process. Has to use inter-process communications (pipes, sockets, etc.)
+
+	A thread exists within a process.
+
+	Multiple threads within a process share same heap space.
+
+	Each thread still has its own registers and stack.
+
+
+Process state: New, Ready, Running, Waiting, Terminated
+
+
 * Paging
 	One of the memory management schemes by which a computer stores and retrieves data from the secondary storage for use in main memory.
 	An important part of virtual memory implementation.
 
 * Virtual memory:  a memory management technique maps memory addresses used by a program, called virtual addresses, into physical addresses in computer memory.
 
-* Context switch: a context switch is the process of storing and restoring the state (more specifically, the context) of a process or thread so that execution can be resumed from the same point at a later time. 
+* Context switch: a context switch is the process of storing and restoring the state (more specifically, the context) of a process or thread so that execution can be resumed from the same point at a later time. (Switch from one state to another state)
 
 * Interrupt: a signal to the processor emitted by hardware or software indicating an event that needs immediate attention. 
 	Hardware interrupt: used by devices to communicate that they require attention from the operating system.
 	Software interrupt: caused either by an exceptional condition in the processor itself, or a special instruction in the instruction set which causes an interrupt when it is executed.
 
 * System call: how a program requests a service from an operating system's kernel.
+
+* Operating System Scheduling algorithms
+	First Come First Serve (FCFS) Scheduling
+
+	Shortest-Job-First (SJF) Scheduling
+
+	Priority Scheduling
+
+	Round Robin(RR) Scheduling
+
+	Multilevel Queue Scheduling

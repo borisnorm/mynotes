@@ -1,4 +1,33 @@
-[k Meaning Clustering]
+Machine Learning by Andrew Ng @ Coursera
+
+[General]
+
+* Curse of dimensionality
+Euclidean distance is unhelpful in high dimensions, because all vectors are almost equidistant to the search query vector (imagine multiple points lying more or less on a circle with the query point at the center; the distance from the query to all data points in the search space is almost the same).
+
+
+
+[Supervised Learning]
+Two types: 1) Regression, 2) Classification
+
+* Gradient Descent
+	1. Gradient descent can converge to a local minimum, even with the learning rate alpha, because as we approach a local minimum, the derivative approaches to zero, so the gradient descent will automatically take smaller steps.
+	Note: no need to decrease alpha over time.
+
+KNN
+	Characters
+		All instances are used in classification.
+
+		Too large value of k is harmful, because for large k very far instances will also be considered, which destroys the locality of the classification.
+	Pros
+
+	Cons
+		kNN is very sensitive to feature selection. Different features and different weightings of features can result in very different decision boundaries.  
+
+
+[Unsupervised Learning]
+
+* K Means Clustering
 Two steps:
 1. Cluster assignment step
 2. Move centroid step
@@ -9,5 +38,3 @@ Two steps:
 
 * To avoid local optima, do multiple random initializations, normally 50 - 100 iterations. When k is 2 - 10, this method works best. For large k, for example several hundreds, multiple random initialization does not helps a lot. Probably the first initialization gives a solution, which can not be improved much in additional random initializations any more.
 
-[Supervised Learning]
-Two types: 1) Regression, 2) Classification

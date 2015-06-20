@@ -1,0 +1,40 @@
+// Part of the content of this note comes from wikipedia
+
+* Normalized vs. Denormalized Databases
+	Normalized database: minimize redundancy, data only stored once. 
+	Denormalized database: denormalize the database by storing redundant data, to optimize read time
+
+
+* Database normalization: 
+	* process of organizing the attributes and tables to minimize data redundancy
+
+	* separates the logical design from the physical design
+
+	* decomposing a table into less redundant (and smaller) tables without losing information
+
+	* defining foreign keys in the old table referencing the primary keys of the new ones. 
+
+	* isolate data so that additions, deletions, and modifications of an attribute can be made in just one table and then propagated through the rest of the database using foreign keys, and therefore no error.
+
+	* 1NF, 2NF, 3NF, BCNF
+
+	* a relational database table is often described as "normalized" if it is in 3NF, because Most 3NF tables are free of insertion, update, and deletion anomalies.
+
+* Database Index
+	a data structure improves the speed of data retrieval operations on a database table at the cost of additional writes and storage space to maintain the index data structure. 
+
+	Indexes are used to quickly locate data without having to search every row in a database table every time a database table is accessed. 
+
+	Indexes can be created using one or more columns of a database table, providing the basis for both rapid random lookups and efficient access of ordered records.
+
+* Database transaction: a unit of work performed, to purposes:
+	To provide reliable units of work that allow correct recovery from failures and keep a database consistent even in cases of system failure
+
+	To provide isolation between programs accessing a database concurrently. 
+
+	ACID:
+		原子性（Atomicity）：事务作为一个整体被执行，包含在其中的对数据库的操作要么全部被执行，要么都不执行[3]。
+		一致性（Consistency）：事务应确保数据库的状态从一个一致状态转变为另一个一致状态。一致状态的含义是数据库中的数据应满足完整性约束[3]。
+		隔离性（Isolation）：多个事务并发执行时，一个事务的执行不应影响其他事务的执行[3]。
+		持久性（Durability）：已被提交的事务对数据库的修改应该永久保存在数据库中[3]。
+	
