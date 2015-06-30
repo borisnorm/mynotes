@@ -1,0 +1,2 @@
+AJAX: a set of Web development techniques used on the client-side to create asynchronous Web applications.
+
