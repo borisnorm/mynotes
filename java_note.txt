@@ -40,7 +40,7 @@ See example below,
 	no modifier	Y	Y	N		N
 	private		Y	N	N		N
 
-* StringBuilder
+* StringBuilder:
 	deleteCharAt()
 	length() NOT size()
 
@@ -51,10 +51,18 @@ See example below,
 
 	Operations: 
 		add(), 
-	clear(), 
-	peek(), 
-	poll() - Retrieves and removes the head of this queue, or returns null if this queue is empty,
-	size()
+		clear(), 
+		peek(), 
+		poll() - Retrieves and removes the head of this queue, or returns null if this queue is empty,
+		size()
+
+* Queue:
+	Initialize: Queue<T> queue = new LinkedList<T>();
+	queue.offer(obj);	// Add
+	queue.pull();		// Remove
+
+* Convert String to Int
+	Integer.parseInt(str);
 
 * How to make a comparator?
 
