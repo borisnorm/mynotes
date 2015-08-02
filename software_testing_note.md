@@ -1,25 +1,28 @@
 # Box approach
 
-	## Black-box testing
+## Black-box testing
 
-	## White-box testing
+## White-box testing
 
-	## Gray-box testing
+## Gray-box testing
 
 # Testing levels
 
-	## Unit testing / component testing
-	* usually written by developers as they work on code
-	* white-box style)
+## Unit testing / component testing
+* usually written by developers as they work on code
+* white-box style)
 
-	## Integration testing
-	* Any type of software testing that seeks to verify the interfaces between components against a software design.
-	* The phase in software testing in which individual software modules are combined and tested as a group. 
-	* Occurs after unit testing and before validation testing.
-	* Progressively larger groups of tested software components corresponding to elements of the architectural design are integrated and tested until the software works as a system.
+## Integration testing
+* Any type of software testing that seeks to verify the interfaces between components against a software design.
 
-	## Component interface testing 
-	* A variation of black-box testing
+* The phase in software testing in which individual software modules are combined and tested as a group. 
+
+* Occurs after unit testing and before validation testing.
+
+* Progressively larger groups of tested software components corresponding to elements of the architectural design are integrated and tested until the software works as a system.
+
+## Component interface testing 
+* A variation of black-box testing
 
 
 
