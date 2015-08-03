@@ -73,31 +73,46 @@ Test-driven development (TDD) is a software development process that relies on t
 
 
 # Software Testing Life Cycle (STLC)
+http://www.guru99.com/software-testing-life-cycle.html
 
 * Requirement Analysis
-** Identify types of tests to be performed. 
-** Gather details about testing priorities and focus.
-** Prepare Requirement Traceability Matrix (RTM).
-** Identify test environment details where testing is supposed to be carried out. 
-** Automation feasibility analysis (if required).
+  * Identify types of tests to be performed. 
+  * Gather details about testing priorities and focus.
+  * Prepare Requirement Traceability Matrix (RTM).
+  * Identify test environment details where testing is supposed to be carried out. 
+  * Automation feasibility analysis (if required).
 
 * Test Planning / Test Strategy
-** Prepare test plan/strategy document
-** Select test tool
-** Estimate test effort
-** Determine resource / roles / responsibilities
-** Training requirement
+  * Prepare test plan/strategy document
+  * Select test tool
+  * Estimate test effort
+  * Determine resource / roles / responsibilities
+  * Training requirement
 
 * Test Case Development
-** Create test cases, automation scripts
-** Review and baseline test cases and scripts 
-** Create test data
+  * Create test cases, automation scripts
+  * Review and baseline test cases and scripts 
+  * Create test data
 
 * Environment Setup
+  * Understand and prepare hardware and software requirement list for the Test Environment. 
+  * Setup test Environment and test data 
+  * Perform smoke test on the build
 
 * Test Execution
+  * Execute tests
+  * Document test results, and log defects for failed cases 
+  * Map defects to test cases in RTM 
+  * Retest the defect fixes 
+  * Track the defects to closure
 
 * Test Cycle Closure
+  * Evaluate cycle completion criteria
+  * Prepare test metrics
+  * Document the learning out of the project 
+  * Prepare Test closure report 
+  * Qualitative and quantitative reporting of quality of the work product. 
+  * Test result analysis to find out the defect distribution by type and severity.
 
 
 
