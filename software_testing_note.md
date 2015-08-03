@@ -37,7 +37,7 @@
 * A common type of non-functional software testing
 
 
-# Testing levels
+# Testing Types
 
 ## Regression testing
 * Uncover new software bugs, or regressions after changes, enhancements, patches or configuration changes.
@@ -51,6 +51,9 @@
 ## Non-regression testing
 * To verify whether the change after an update of the software has had the intended effect.
 
+## Smoke testing
+* Reveal simple failures severe enough to reject a prospective software release. Test cases that cover the most important functionality are selected and run to determine if crucial functions work correctly.
+
 # Agile testing
 
 * Not a separate phase, but an integral part of software development, along with coding.
@@ -63,12 +66,38 @@
 
 * Least formal test method
 
-* Strength of ad hoc testing: important defects can be found quickly.
+* Goodness of ad hoc testing: important defects can be found quickly.
 
 # Test-driven Development
 Test-driven development (TDD) is a software development process that relies on the repetition of a very short development cycle: first the developer writes an (initially failing) automated test case that defines a desired improvement or new function, then produces the minimum amount of code to pass that test, and finally refactors the new code to acceptable standards.
 
 
+# Software Testing Life Cycle (STLC)
+
+* Requirement Analysis
+** Identify types of tests to be performed. 
+** Gather details about testing priorities and focus.
+** Prepare Requirement Traceability Matrix (RTM).
+** Identify test environment details where testing is supposed to be carried out. 
+** Automation feasibility analysis (if required).
+
+* Test Planning / Test Strategy
+** Prepare test plan/strategy document
+** Select test tool
+** Estimate test effort
+** Determine resource / roles / responsibilities
+** Training requirement
+
+* Test Case Development
+** Create test cases, automation scripts
+** Review and baseline test cases and scripts 
+** Create test data
+
+* Environment Setup
+
+* Test Execution
+
+* Test Cycle Closure
 
 
 
