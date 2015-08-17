@@ -32,7 +32,7 @@ Reference to: https://help.github.com/articles/markdown-basics/
 
 * Code block
 
-```
+```java
 package dmcoder.mycode.onlinejudge.leetcode.script;
 
 import dmcoder.mycode.onlinejudge.leetcode.ListNode;
