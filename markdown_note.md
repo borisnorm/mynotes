@@ -28,3 +28,11 @@ Reference to: https://help.github.com/articles/markdown-basics/
     * This is indented four spaces, because it's two spaces further than the item above.
     * You might want to consider making a new list.
 3. Item 3
+
+
+* Code block
+```
+function test() {
+  console.log("notice the blank line before this function?");
+}
+```
