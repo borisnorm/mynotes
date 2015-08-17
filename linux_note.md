@@ -1,4 +1,5 @@
-Common Linux commands:
+Create a file: touch
+
 ps [options]	Display a snapshot of the currently running processes.
 
 grep [options] pattern [filesname]	Search files or output for a particular pattern.
@@ -18,4 +19,6 @@ mkdir [options] directory	Create a new directory.
 mv [options] source destination	Rename or move file(s) or directories.
 
 rmdir [options] directory	Delete empty directories.
+
+
 
