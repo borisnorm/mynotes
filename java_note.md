@@ -1,3 +1,22 @@
+# Java Usage
+## LinkedList & Queue
+* Throw Exception
+  * add(): throws exception
+  * add(int index, E element)
+	* remove()
+	* element()
+
+* Not Throw Exception
+  * offer()
+  * poll(): returns null if this list is empty
+	* peek()
+
+* Personally prefer to use add(), remove(), and peek()
+
+
+
+
+
 * How to override equals() method?
 See example below,
 
@@ -45,14 +64,14 @@ See example below,
 	length() NOT size()
 
 * PriorityQueue: The head of this queue is the least element with respect to the specified ordering.
-	Constructor: 
+	Constructor:
 		PriorityQueue(),
 		PriorityQueue(int initialCapacity, Comparator<? super E> comparator)
 
-	Operations: 
-		add(), 
-		clear(), 
-		peek(), 
+	Operations:
+		add(),
+		clear(),
+		peek(),
 		poll() - Retrieves and removes the head of this queue, or returns null if this queue is empty,
 		size()
 
@@ -104,10 +123,10 @@ See example below,
 
 	It is better off externally synchronizing a HashMap or using ConcurrentHashMap.
 
-	HashMap is the subclass of the AbstractMap class. 
+	HashMap is the subclass of the AbstractMap class.
 
 	But both Hashtable and HashMap both implements Map interface.
-	
+
 
 * Hashtable vs. ConcurrentHashMap
 	Both are thread safe, but ConcurentHashMap has better performance. When you read from a ConcurrentHashMap using get(), there are no locks, contrary to the HashTable for which all operations are simply synchronized.

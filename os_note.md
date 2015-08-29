@@ -74,7 +74,7 @@ a signal to the processor emitted by hardware or software indicating an event th
 	If we only what to be runnable, then just Runnable interface would be enough. No need to bother to inherit the full overhead of the Thread class.
 
 # Interview Problems
-## Use Mutex to implement read write lock
+## Use Mutex to implement read-write lock
 * Use one read mutex, and one write mutex.
 * Use a counter to store how many reads are there currently.
 * To start a read, lock the read mutex. If this is the first read, lock the write mutex as well. Then unlock the read mutex, as there could be multiple concurrent reads.
