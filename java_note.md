@@ -13,6 +13,13 @@
 
 * Personally prefer to use add(), remove(), and peek()
 
+## ArrayList
+* remove()
+* Replace at certain place: set(index, ele)
+
+## Stack
+* push(), pop(), peek()
+
 
 
 
