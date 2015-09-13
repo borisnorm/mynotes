@@ -32,20 +32,20 @@
 # Code Snippets
 ## Define a comparator
 ```
-        Comparator<ListNode> comp = new Comparator<ListNode>() {
-            @Override
-            public int compare(ListNode n1, ListNode n2) {
-                if (n1.val < n2.val) {
-                    return -1;
-                }
-                else if (n1.val == n2.val) {
-                    return 0;
-                }
-                else {
-                    return 1;
-                }
-            }
-        }; // Don’t forget the last semicolon mark.
+Comparator<ListNode> comp = new Comparator<ListNode>() {
+    @Override
+    public int compare(ListNode n1, ListNode n2) {
+        if (n1.val < n2.val) {
+            return -1;
+        }
+        else if (n1.val == n2.val) {
+            return 0;
+        }
+        else {
+            return 1;
+        }
+    }
+}; // Don’t forget the last semicolon mark.
 ```
 * The override method is: int compare(T t1, T t2).
 * Don’t forget the last semicolon mark.
@@ -107,6 +107,7 @@ See example below,
 
 	Operations:
 		add(),
+    remove(),
 		clear(),
 		peek(),
 		poll() - Retrieves and removes the head of this queue, or returns null if this queue is empty,
