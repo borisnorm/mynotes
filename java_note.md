@@ -11,7 +11,18 @@
   * poll(): returns null if this list is empty
 	* peek()
 
-* Personally prefer to use add(), remove(), and peek()
+* Personally prefer to use add(), remove(), and peek(), poll()
+
+* PriorityQueue: The head of this queue is the least element with respect to the specified ordering.
+	* Constructor:
+		* PriorityQueue(),
+		* PriorityQueue(int initialCapacity, Comparator<? super E> comparator)
+	* Operations:
+		* add()
+    * remove()
+		* peek()
+		* poll() - Retrieves and removes the head of this queue, or returns null if this queue is empty,
+    * clear()
 
 ## ArrayList
 * remove()
@@ -99,19 +110,6 @@ See example below,
 * StringBuilder:
 	deleteCharAt()
 	length() NOT size()
-
-* PriorityQueue: The head of this queue is the least element with respect to the specified ordering.
-	Constructor:
-		PriorityQueue(),
-		PriorityQueue(int initialCapacity, Comparator<? super E> comparator)
-
-	Operations:
-		add(),
-    remove(),
-		clear(),
-		peek(),
-		poll() - Retrieves and removes the head of this queue, or returns null if this queue is empty,
-		size()
 
 * Queue:
 	Initialize: Queue<T> queue = new LinkedList<T>();
