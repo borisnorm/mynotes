@@ -39,6 +39,43 @@
 * Hashtable is thread safe
 * HashMap and HashSet is not thread safe
 
+# Concepts and Comparison
+## Abstract Class
+* An abstract class is a class that is declared abstract.
+* An abstract class does not have to include abstract methods.
+* An abstract class can have concrete methods.
+* If a class include any abstract methods, it has to be declared as abstract class.
+* Abstract classes cannot be instantiated, but can be subclassed.
+* The Subclasses can either implement the abstract methods or not. But if not, the subclasses have to be declared as abstract as well.
+* A class must be declared abstract if any of the methods in that class are abstract.
+
+## Interface
+* Interface can have default with a body.
+* We can have an interface B extends another interface B, so that B can extends A's behaviors without force any classes implements A to implements the new behaviors. So the users of those classes can choose to implements A or B.
+```
+public interface DoItPlus extends DoIt {
+
+   boolean didItWork(int i, double x, String s);
+
+}
+```
+
+## Abstract Class vs. Interface
+* Reference https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html
+* Reference https://docs.oracle.com/javase/tutorial/java/concepts/interface.html
+* Reference http://www.programmerinterview.com/index.php/java-questions/interface-vs-abstract-class/
+### Similarities
+* Both can have a number of abstract and concrete methods.
+* Both cannot be instantiated.
+### Differences
+* In abstract classes we can declare fields that are not static and final, and define public, protected, and private concrete methods.
+* In interface, all fields are automatically *public*, *static*, and *final*, and all methods that you declare or define (as default methods) are *public*. This means in interface there could be some final interface specific fields accessed by everyone, while in abstract class there could not be such things.
+* The subclass derived from an abstract class can either implement all the abstract methods and make itself a concrete class, or not implement some or all abstract methods and declare itself as a abstract class as well.
+* The class implements an interface has to implement all the methods in the interface.
+### When to choose abstract class
+
+### When to choose interface
+
 
 # Code Snippets
 ## Define a comparator
