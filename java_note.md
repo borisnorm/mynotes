@@ -7,9 +7,14 @@
 	* element()
 
 * Not Throw Exception
-  * offer()
-  * poll(): returns null if this list is empty
+  * offer(): add
+  * poll(): remove, returns null if this list is empty
 	* peek()
+
+* Use LinkedList to initialize Queue
+```
+Queue<T> queue = new LinkedList<T>();
+```
 
 * Personally prefer to use add(), remove(), and peek(), poll()
 
@@ -34,6 +39,8 @@
 ## StringBuilder
 * Get char: charAt()
 * Set char: setCharAt(int index, char ch)
+* Delete char: deleteCharAt()
+* Get length: length() NOT size()
 
 ## Thread safe
 * Hashtable is thread safe
@@ -50,7 +57,7 @@
 * A class must be declared abstract if any of the methods in that class are abstract.
 
 ## Interface
-* Interface can have default with a body.
+* Interface can have default method with a body.
 * We can have an interface B extends another interface B, so that B can extends A's behaviors without force any classes implements A to implements the new behaviors. So the users of those classes can choose to implements A or B.
 ```
 public interface DoItPlus extends DoIt {
@@ -76,6 +83,18 @@ public interface DoItPlus extends DoIt {
 
 ### When to choose interface
 
+## Final vs. Finally vs. Finalize
+### _Final_
+* For primitive variable, it means the variable cannot change.
+* For reference variable, it means it cannot point to any other object on the heap.
+* For a method, it means it cannot be overridden.
+* For a class, it means it cannot be subclassed.
+
+### _Finally_
+* _try_, _catch_, _finally_ blocks. The finally block will always be executed (except if JVM exits from the try block). It is used to place the clean up code.
+
+### _Finalize_
+* It is called by garbage collector thread before reclaiming the memory allocated to the object, but it is not guaranteed. Do not use it.
 
 # Code Snippets
 ## Define a comparator
@@ -97,6 +116,19 @@ Comparator<ListNode> comp = new Comparator<ListNode>() {
 ```
 * The override method is: int compare(T t1, T t2).
 * Don’t forget the last semicolon mark.
+
+# Table
+## Access Levels
+
+| Modifier    | Class | Package | Subclass | World |
+| ----------- | ----- | ------- | -------- | ----- |
+| public      | Y     | Y       | Y        | Y     |
+| ----------- | ----- | ------- | -------- | ----- |
+| protected   | Y     | Y       | Y        | N     |
+| ----------- | ----- | ------- | -------- | ----- |
+| no modifier | Y     | Y       | N        | N     |
+| ----------- | ----- | ------- | -------- | ----- |
+| private     | Y     | N       | N        | N     |
 
 
 
@@ -138,20 +170,19 @@ See example below,
 	3. Return result.
 
 * Access Levels
-	Modifier	Class	Package	Subclass	World
-	public		Y	Y	Y		Y
-	protected	Y	Y	Y		N
-	no modifier	Y	Y	N		N
-	private		Y	N	N		N
 
-* StringBuilder:
-	deleteCharAt()
-	length() NOT size()
+| Modifier    | Class | Package | Subclass | World |
+| ----------- | ----- | ------- | -------- | ----- |
+| public      | Y     | Y       | Y        | Y     |
+| ----------- | ----- | ------- | -------- | ----- |
+| protected   | Y     | Y       | Y        | N     |
+| ----------- | ----- | ------- | -------- | ----- |
+| no modifier | Y     | Y       | N        | N     |
+| ----------- | ----- | ------- | -------- | ----- |
+| private     | Y     | N       | N        | N     |
 
-* Queue:
-	Initialize: Queue<T> queue = new LinkedList<T>();
-	queue.offer(obj);	// Add
-	queue.pull();		// Remove
+
+
 
 * Convert String to Int
 	Integer.parseInt(str);
@@ -193,12 +224,7 @@ See example below,
 
 * Database connection pool: a cache of database connections maintained so that the connections can be reused when future requests to the database are required.
 
-* Final vs. Finally vs. Finalize
-	Final: 1) for primitive variable, it means the variable cannot change; 2) for reference variable, it means it cannot point to any other object on the heap; 3) for a method, it means it cannot be overridden; 4) for a class, it means it cannot be subclassed.
 
-	Finally: try, catch, finally blocks. The finally block will always be executed (except if JVM exits from the try block). It is used to write the clean up code.
-
-	Finalize: called by garbage collector thread before reclaiming the memory allocated to the object, but it is not guaranteed. Do not use it.
 
 * Java stack and heap
 
