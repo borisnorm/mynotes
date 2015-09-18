@@ -96,6 +96,25 @@ public interface DoItPlus extends DoIt {
 ### _Finalize_
 * It is called by garbage collector thread before reclaiming the memory allocated to the object, but it is not guaranteed. Do not use it.
 
+## String vs. StringBuilder vs. StringBuffer
+* String is immutable
+* StringBuilder and StringBuffer are mutable.
+* StringBuffer is synchronized so it is thread safe
+* StringBuilder is not synchronized so it is not thread safe
+
+## Hashtable vs. HashMap
+* HashTable is synchronized and thread safe. Slow.
+* HashMap is non synchronized and not thread safe. Fast.
+* Hashtable does not allow null keys and null values.
+* HashMap allows one null key and any number of null values, while
+* Hashtable is a subclass of Dictionary class which is obsolete in Jdk 1.7. It is better off externally synchronizing a HashMap or using ConcurrentHashMap.
+* But both Hashtable and HashMap implement _Map_ interface.
+
+## Vector vs. ArrayList
+* Vector is synchronized. Slow.
+* ArrayList is not synchronized.
+* Vector is not part of Collection. Old implementation, avoid.
+
 # Code Snippets
 ## Define a comparator
 ```
@@ -117,42 +136,35 @@ Comparator<ListNode> comp = new Comparator<ListNode>() {
 * The override method is: int compare(T t1, T t2).
 * Don’t forget the last semicolon mark.
 
+## Override _equals()_ method?
+```java
+@Override
+public boolean equals(Object obj) {
+  // Check shallow
+  if (obj == this) {
+    return true;
+  }
+
+  // Check class name
+  if (obj == null || obj.getClass() != this.getClass()) {
+    return false;
+  }
+
+  // Check deep
+  Point2D myPoint2D = (Point2D) obj;
+  return this.x == myPoint2D.x && this.y == myPoint2D.y;
+}
+```
+
 # Table
 ## Access Levels
-
 | Modifier    | Class | Package | Subclass | World |
 | ----------- | ----- | ------- | -------- | ----- |
 | public      | Y     | Y       | Y        | Y     |
-| ----------- | ----- | ------- | -------- | ----- |
 | protected   | Y     | Y       | Y        | N     |
-| ----------- | ----- | ------- | -------- | ----- |
 | no modifier | Y     | Y       | N        | N     |
-| ----------- | ----- | ------- | -------- | ----- |
 | private     | Y     | N       | N        | N     |
 
-
-
-
-
-* How to override equals() method?
-See example below,
-
-	@Override
-	public boolean equals(Object obj) {
-		// Check shallow
-		if (obj == this) {
-			return true;
-		}
-
-		// Check class name
-		if (obj == null || obj.getClass() != this.getClass()) {
-			return false;
-		}
-
-		// Check deep
-		Point2D myPoint2D = (Point2D) obj;
-		return this.x == myPoint2D.x && this.y == myPoint2D.y;
-	}
 
 * How to override hashCode() method?
 	1. Store some constant nonzero value, say, 17, in an int variable called result.
@@ -169,45 +181,8 @@ See example below,
 			result = 31 * result + c;
 	3. Return result.
 
-* Access Levels
-
-| Modifier    | Class | Package | Subclass | World |
-| ----------- | ----- | ------- | -------- | ----- |
-| public      | Y     | Y       | Y        | Y     |
-| protected   | Y     | Y       | Y        | N     |
-| no modifier | Y     | Y       | N        | N     |
-| private     | Y     | N       | N        | N     |
-
-
-
-
 * Convert String to Int
 	Integer.parseInt(str);
-
-* String vs. StringBuilder vs. StringBuffer
-	String is immutable, while StringBuilder and StringBuffer are mutable.
-	StringBuffer is synchronized so it is thread safe, StringBuilder is not.
-
-* Vector vs. ArrayList
-	Vector is synchronized (and thus slow), ArrayList is not
-	Vector is not part of Collection
-	Vector is old implementation, avoid
-
-* Hashtable vs. HashMap
-	HashMap is non synchronized and not thread safe.On the other hand, HashTable is thread safe and synchronized.
-
-	HashMap allows one null key and any number of null values, while Hashtable does not allow null keys and null values.
-
-	HashMap is faster than Hashtable.
-
-	Hashtable is a subclass of Dictionary class which is obsolete in Jdk 1.7.
-
-	It is better off externally synchronizing a HashMap or using ConcurrentHashMap.
-
-	HashMap is the subclass of the AbstractMap class.
-
-	But both Hashtable and HashMap both implements Map interface.
-
 
 * Hashtable vs. ConcurrentHashMap
 	Both are thread safe, but ConcurentHashMap has better performance. When you read from a ConcurrentHashMap using get(), there are no locks, contrary to the HashTable for which all operations are simply synchronized.
