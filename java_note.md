@@ -116,15 +116,17 @@ public interface DoItPlus extends DoIt {
 * Vector is not part of Collection. Old implementation, avoid.
 
 # Code Snippets
-## Define a comparator
+## Three Ways to Compare in Java
+* Define a comparator object
 ```
 Comparator<ListNode> comp = new Comparator<ListNode>() {
     @Override
-    public int compare(ListNode n1, ListNode n2) {
-        if (n1.val < n2.val) {
+    // The override method is: int compare(T t1, T t2).
+    public int compare(T t1, T t2) {
+        if (t1.val < t2.val) {
             return -1;
         }
-        else if (n1.val == n2.val) {
+        else if (t1.val == t2.val) {
             return 0;
         }
         else {
@@ -133,8 +135,47 @@ Comparator<ListNode> comp = new Comparator<ListNode>() {
     }
 }; // Don’t forget the last semicolon mark.
 ```
-* The override method is: int compare(T t1, T t2).
-* Don’t forget the last semicolon mark.
+
+* Define a comparator class implements *Comparator* interface. Create a comparator of that class.
+```
+private class MyComparator implements Comparator<T> {
+  	@Override
+    public int compare(T t1, T t2) {
+        if (t1.val < t2.val) {
+            return -1;
+        }
+        else if (t1.val == t2.val) {
+            return 0;
+        }
+        else {
+            return 1;
+        }
+    }
+}
+```
+
+* Let the elements implements *Comparable* interface
+```
+public class Element implements Comparable<T> {
+    @Override
+    public int compareTo(T t) {
+        if (this == t) {
+            return 0;
+        }
+
+        if (this.value > t.value) {
+            return 1;
+        }
+        else if (this.value == t.value) {
+            return 0;
+        }
+        else {
+            return -1;
+        }
+    }
+}
+```
+
 
 ## Override _equals()_ method?
 ```java
