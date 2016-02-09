@@ -8,6 +8,11 @@ export PATH="/mypath:$PATH"
 export PATH="$PATH:/mypath"
 ```
 
+* To write to the bash_profile file:
+```
+echo 'export PATH=/apollo/env/SDETools/bin:$PATH' >> ~/.bash_profile
+```
+
 Create a file: touch
 
 ps [options]	Display a snapshot of the currently running processes.
