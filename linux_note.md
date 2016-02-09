@@ -1,12 +1,12 @@
 * To add /mypath to the beginning of the environment path:
-'''
+```
 export PATH="/mypath:$PATH"
-'''
+```
 
 * To add /mypath to the end of the environment path:
-'''
+```
 export PATH="$PATH:/mypath"
-'''
+```
 
 Create a file: touch
 
