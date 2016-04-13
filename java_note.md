@@ -1,3 +1,11 @@
+# Python Usage
+* How to check if a directory exists and create it if necessary?
+```
+if not os.path.exists(directory):
+    os.makedirs(directory)
+```
+[http://stackoverflow.com/questions/273192/how-to-check-if-a-directory-exists-and-create-it-if-necessary]
+
 # Java Usage
 ## LinkedList & Queue
 * Throw Exception
