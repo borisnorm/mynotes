@@ -1,3 +1,8 @@
+* To set a environment variable temporarily (note: do not put space between):
+```
+export VAR=123
+```
+
 * To add /mypath to the beginning of the environment path:
 ```
 export PATH="/mypath:$PATH"
