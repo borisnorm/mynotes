@@ -1,3 +1,17 @@
+= Git =
+
+* Create a branch
+```
+git checkout -b branch_name
+```
+
+* Commit small changes
+```
+git commit --amend
+```
+
+= Linux =
+
 * To set a environment variable temporarily (note: do not put space between):
 ```
 export VAR=123
